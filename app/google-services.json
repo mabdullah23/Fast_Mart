@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "461842273462",
+    "firebase_url": "https://fastmart3-73a96-default-rtdb.firebaseio.com",
+    "project_id": "fastmart3-73a96",
+    "storage_bucket": "fastmart3-73a96.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461842273462:android:00ab6b2f228fe49acf8217",
+        "android_client_info": {
+          "package_name": "com.example.fastmart3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6UUMKM0TfrwEwEX7MkoiJvMcEIzpwusk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
