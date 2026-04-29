@@ -1,10 +1,15 @@
 package com.example.fastmart3.ui.activities;
 
 import android.app.AlertDialog;
+<<<<<<< HEAD
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.text.TextUtils;
+=======
+import android.os.Bundle;
+import android.telephony.SmsManager;
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,12 +25,19 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.example.fastmart3.R;
 import com.example.fastmart3.database.DatabaseHelper;
 import com.example.fastmart3.database.entities.CartEntity;
+<<<<<<< HEAD
 import com.example.fastmart3.models.Order;
 import com.example.fastmart3.models.OrderItem;
 import com.example.fastmart3.utils.ImageUtility;
 import com.example.fastmart3.utils.SharedPrefManager;
 import java.util.ArrayList;
 import java.util.List;
+=======
+import com.example.fastmart3.utils.SharedPrefManager;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
 
 public class CartActivity extends AppCompatActivity {
     
@@ -90,26 +102,40 @@ public class CartActivity extends AppCompatActivity {
                     return;
                 }
                 
+<<<<<<< HEAD
+=======
+                // Prepare order summary
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                 StringBuilder smsBody = new StringBuilder("FastMart Order Summary:\n\n");
                 double totalAmount = 0;
                 String sellerId = cartItems.get(0).sellerId;
                 String sellerName = cartItems.get(0).sellerName;
                 
+<<<<<<< HEAD
                 List<OrderItem> orderItems = new ArrayList<>();
                 
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                 for (CartEntity item : cartItems) {
                     double itemTotal = item.productPrice * item.quantity;
                     totalAmount += itemTotal;
                     smsBody.append(item.productName).append(" x").append(item.quantity)
                            .append(" = Rs.").append(itemTotal).append("\n");
+<<<<<<< HEAD
                     
                     OrderItem orderItem = new OrderItem(item.productName, item.productType, 
                             item.quantity, item.productPrice, item.imageBase64);
                     orderItems.add(orderItem);
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                 }
                 smsBody.append("\nTotal: Rs.").append(totalAmount);
                 smsBody.append("\n\nThank you for shopping with FastMart!");
                 
+<<<<<<< HEAD
+=======
+                // Send SMS
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                 try {
                     String phoneNumber = sp.getPhone();
                     SmsManager.getDefault().sendTextMessage(phoneNumber, null, smsBody.toString(), null, null);
@@ -118,27 +144,68 @@ public class CartActivity extends AppCompatActivity {
                     Toast.makeText(CartActivity.this, "SMS failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
                 
+<<<<<<< HEAD
+=======
+                // Save order to Firebase for seller
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                 String buyerId = sp.getUserId();
                 String buyerName = sp.getUserName();
                 String buyerPhone = sp.getPhone();
                 String buyerAddress = sp.getAddress();
                 
+<<<<<<< HEAD
                 Order order = new Order(buyerId, buyerName, buyerPhone, buyerAddress,
                         sellerId, sellerName, orderItems, totalAmount);
                 
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                 DatabaseReference ordersRef = FirebaseDatabase.getInstance().getReference("orders")
                         .child(sellerId).child(buyerId);
                 
                 String orderId = ordersRef.push().getKey();
                 if (orderId != null) {
+<<<<<<< HEAD
                     ordersRef.child(orderId).setValue(order.toMap());
                 }
                 
+=======
+                    Map<String, Object> orderMap = new HashMap<>();
+                    orderMap.put("orderId", orderId);
+                    orderMap.put("buyerId", buyerId);
+                    orderMap.put("buyerName", buyerName);
+                    orderMap.put("buyerPhone", buyerPhone);
+                    orderMap.put("buyerAddress", buyerAddress);
+                    orderMap.put("sellerId", sellerId);
+                    orderMap.put("sellerName", sellerName);
+                    orderMap.put("totalAmount", totalAmount);
+                    orderMap.put("timestamp", System.currentTimeMillis());
+                    orderMap.put("status", "Pending");
+                    
+                    // Add items
+                    for (int i = 0; i < cartItems.size(); i++) {
+                        CartEntity item = cartItems.get(i);
+                        Map<String, Object> itemMap = new HashMap<>();
+                        itemMap.put("productName", item.productName);
+                        itemMap.put("quantity", item.quantity);
+                        itemMap.put("unitPrice", item.productPrice);
+                        itemMap.put("itemTotal", item.productPrice * item.quantity);
+                        orderMap.put("item_" + i, itemMap);
+                    }
+                    
+                    ordersRef.child(orderId).setValue(orderMap);
+                }
+                
+                // Show success dialog
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                 new AlertDialog.Builder(CartActivity.this)
                     .setTitle("Order Placed Successfully!")
                     .setMessage("Your order has been placed.\nTotal: Rs. " + String.format("%.2f", totalAmount) + 
                                "\n\nOrder details sent via SMS.")
                     .setPositiveButton("OK", (dialog, which) -> {
+<<<<<<< HEAD
+=======
+                        // Clear cart
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                         dbHelper.clearCart();
                         loadCart();
                         updateTotal();
@@ -168,6 +235,7 @@ public class CartActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
             CartEntity item = cartItems.get(position);
+<<<<<<< HEAD
             
             if (item.imageBase64 != null && !TextUtils.isEmpty(item.imageBase64)) {
                 Bitmap bitmap = ImageUtility.base64ToBitmap(item.imageBase64);
@@ -180,6 +248,8 @@ public class CartActivity extends AppCompatActivity {
                 holder.ivProductImage.setImageResource(R.drawable.ic_product_default);
             }
             
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
             holder.tvName.setText(item.productName);
             holder.tvPrice.setText(String.format("Rs. %.2f", item.productPrice));
             holder.tvQuantity.setText(String.valueOf(item.quantity));
@@ -200,6 +270,23 @@ public class CartActivity extends AppCompatActivity {
                     holder.tvQuantity.setText(String.valueOf(item.quantity));
                     holder.tvTotal.setText(String.format("Rs. %.2f", item.getTotalPrice()));
                     updateTotal();
+<<<<<<< HEAD
+=======
+                } else {
+                    // If quantity is 1, delete the item
+                    new AlertDialog.Builder(CartActivity.this)
+                        .setTitle("Remove Item")
+                        .setMessage("Do you want to remove this item from cart?")
+                        .setPositiveButton("Yes", (dialog, which) -> {
+                            dbHelper.deleteCartItem(item);
+                            cartItems.remove(position);
+                            notifyItemRemoved(position);
+                            updateTotal();
+                            if (cartItems.isEmpty()) tvEmpty.setVisibility(View.VISIBLE);
+                        })
+                        .setNegativeButton("No", null)
+                        .show();
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                 }
             });
             
@@ -223,11 +310,18 @@ public class CartActivity extends AppCompatActivity {
         public int getItemCount() { return cartItems.size(); }
         
         class ViewHolder extends RecyclerView.ViewHolder {
+<<<<<<< HEAD
             ImageView ivProductImage, btnPlus, btnMinus, ivDelete;
             TextView tvName, tvPrice, tvQuantity, tvTotal;
             ViewHolder(View itemView) {
                 super(itemView);
                 ivProductImage = itemView.findViewById(R.id.iv_product_image);
+=======
+            TextView tvName, tvPrice, tvQuantity, tvTotal;
+            ImageView btnPlus, btnMinus, ivDelete;
+            ViewHolder(View itemView) {
+                super(itemView);
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                 tvName = itemView.findViewById(R.id.tv_product_name);
                 tvPrice = itemView.findViewById(R.id.tv_product_price);
                 tvQuantity = itemView.findViewById(R.id.tv_quantity);

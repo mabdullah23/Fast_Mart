@@ -1,6 +1,7 @@
 package com.example.fastmart3.ui.fragments.seller;
 
 import android.content.Intent;
+<<<<<<< HEAD
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +12,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+=======
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +27,7 @@ import com.example.fastmart3.models.Product;
 import com.example.fastmart3.repositories.ProductRepository;
 import com.example.fastmart3.ui.activities.ProductAddActivity;
 import com.example.fastmart3.ui.activities.ProductDescriptionActivity;
+<<<<<<< HEAD
 import com.example.fastmart3.utils.ImageUtility;
 import com.example.fastmart3.utils.SharedPrefManager;
 import java.util.HashMap;
@@ -30,6 +38,16 @@ public class SellerHomeFragment extends Fragment {
     
     private RecyclerView recyclerView;
     private SellerProductAdapter adapter;
+=======
+import com.example.fastmart3.ui.adapters.ProductAdapter;
+import com.example.fastmart3.utils.SharedPrefManager;
+import java.util.List;
+
+public class SellerHomeFragment extends Fragment implements ProductAdapter.OnProductClickListener {
+    
+    private RecyclerView recyclerView;
+    private ProductAdapter adapter;
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
     private ProductRepository productRepository;
     private SharedPrefManager sharedPrefManager;
     private FloatingActionButton fabAddProduct;
@@ -42,7 +60,12 @@ public class SellerHomeFragment extends Fragment {
         fabAddProduct = view.findViewById(R.id.fab_add_product);
         
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+<<<<<<< HEAD
         adapter = new SellerProductAdapter();
+=======
+        adapter = new ProductAdapter();
+        adapter.setOnProductClickListener(this);
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         recyclerView.setAdapter(adapter);
         
         productRepository = new ProductRepository();
@@ -66,11 +89,16 @@ public class SellerHomeFragment extends Fragment {
             }
             @Override
             public void onFailure(String errorMessage) {
+<<<<<<< HEAD
                 Toast.makeText(getContext(), errorMessage, Toast.LENGTH_SHORT).show();
+=======
+                android.widget.Toast.makeText(getContext(), errorMessage, android.widget.Toast.LENGTH_SHORT).show();
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
             }
         });
     }
     
+<<<<<<< HEAD
     class SellerProductAdapter extends RecyclerView.Adapter<SellerProductAdapter.ViewHolder> {
         private List<Product> productList;
         private Map<String, Bitmap> imageCache = new HashMap<>();
@@ -145,5 +173,16 @@ public class SellerHomeFragment extends Fragment {
                 tvType = itemView.findViewById(R.id.tv_product_type);
             }
         }
+=======
+    @Override
+    public void onProductClick(Product product) {
+        Intent intent = new Intent(getContext(), ProductDescriptionActivity.class);
+        intent.putExtra("product_id", product.getProductId());
+        intent.putExtra("product_name", product.getName());
+        intent.putExtra("product_price", product.getPrice());
+        intent.putExtra("product_description", product.getDescription());
+        intent.putExtra("product_seller", product.getSellerName());
+        startActivity(intent);
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
     }
 }

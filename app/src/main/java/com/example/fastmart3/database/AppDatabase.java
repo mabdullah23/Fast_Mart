@@ -9,7 +9,11 @@ import com.example.fastmart3.database.daos.CartDao;
 import com.example.fastmart3.database.entities.FavoritesEntity;
 import com.example.fastmart3.database.entities.CartEntity;
 
+<<<<<<< HEAD
 @Database(entities = {FavoritesEntity.class, CartEntity.class}, version = 2, exportSchema = false)
+=======
+@Database(entities = {FavoritesEntity.class, CartEntity.class}, version = 1, exportSchema = false)
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
 public abstract class AppDatabase extends RoomDatabase {
     public abstract FavoritesDao favoritesDao();
     public abstract CartDao cartDao();
@@ -20,7 +24,11 @@ public abstract class AppDatabase extends RoomDatabase {
         if (instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(),
                     AppDatabase.class, "fastmart3_database")
+<<<<<<< HEAD
                     .fallbackToDestructiveMigration()  // This will recreate the database
+=======
+                    .fallbackToDestructiveMigration()
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                     .build();
         }
         return instance;

@@ -15,8 +15,11 @@ import com.example.fastmart3.R;
 import com.example.fastmart3.ui.fragments.seller.SellerHomeFragment;
 import com.example.fastmart3.ui.fragments.seller.SellerOrderHistoryFragment;
 import com.example.fastmart3.ui.fragments.seller.SellerAccountFragment;
+<<<<<<< HEAD
 import com.example.fastmart3.ui.fragments.seller.SellerChatListFragment;
 import com.example.fastmart3.ui.fragments.ThemeSettingsFragment;
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
 import com.example.fastmart3.utils.SharedPrefManager;
 
 public class SellerMainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -57,6 +60,7 @@ public class SellerMainActivity extends AppCompatActivity implements NavigationV
         Fragment fragment = null;
         int id = item.getItemId();
         
+<<<<<<< HEAD
         if (id == R.id.nav_home) {
             fragment = new SellerHomeFragment();
         } else if (id == R.id.nav_orders) {
@@ -68,6 +72,12 @@ public class SellerMainActivity extends AppCompatActivity implements NavigationV
         } else if (id == R.id.nav_account) {
             fragment = new SellerAccountFragment();
         } else if (id == R.id.nav_logout) {
+=======
+        if (id == R.id.nav_home) fragment = new SellerHomeFragment();
+        else if (id == R.id.nav_orders) fragment = new SellerOrderHistoryFragment();
+        else if (id == R.id.nav_account) fragment = new SellerAccountFragment();
+        else if (id == R.id.nav_logout) {
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
             sharedPrefManager.logout();
             startActivity(new Intent(this, LoginActivity.class));
             finish();
@@ -86,6 +96,7 @@ public class SellerMainActivity extends AppCompatActivity implements NavigationV
     
     @Override
     public void onBackPressed() {
+<<<<<<< HEAD
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
@@ -93,3 +104,9 @@ public class SellerMainActivity extends AppCompatActivity implements NavigationV
         }
     }
 }
+=======
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) drawerLayout.closeDrawer(GravityCompat.START);
+        else super.onBackPressed();
+    }
+}
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2

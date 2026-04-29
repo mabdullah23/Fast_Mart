@@ -13,20 +13,31 @@ public class FavoritesEntity {
     public String productType;
     public double productPrice;
     public String sellerName;
+<<<<<<< HEAD
     public String imageBase64;
+=======
+    public String imageUrl;
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
     public long timestamp;
     
     public FavoritesEntity() {}
     
     @Ignore
     public FavoritesEntity(String productId, String productName, String productType, 
+<<<<<<< HEAD
                           double productPrice, String sellerName, String imageBase64) {
+=======
+                          double productPrice, String sellerName) {
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         this.productId = productId;
         this.productName = productName;
         this.productType = productType;
         this.productPrice = productPrice;
         this.sellerName = sellerName;
+<<<<<<< HEAD
         this.imageBase64 = imageBase64;
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         this.timestamp = System.currentTimeMillis();
     }
 }

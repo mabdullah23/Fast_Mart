@@ -53,7 +53,11 @@ public class ProductDescriptionActivity extends AppCompatActivity {
     private void addToCart() {
         CartEntity cartItem = new CartEntity(productId, productName, 
                 productType != null ? productType : "General", 
+<<<<<<< HEAD
                 productPrice, 1, productSeller, productSellerId, "");
+=======
+                productPrice, 1, productSeller, productSellerId);
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         dbHelper.insertCartItem(cartItem);
         Toast.makeText(this, "Added to cart", Toast.LENGTH_SHORT).show();
     }
@@ -61,9 +65,17 @@ public class ProductDescriptionActivity extends AppCompatActivity {
     private void buyNow() {
         CartEntity cartItem = new CartEntity(productId, productName, 
                 productType != null ? productType : "General", 
+<<<<<<< HEAD
                 productPrice, 1, productSeller, productSellerId, "");
+=======
+                productPrice, 1, productSeller, productSellerId);
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         dbHelper.insertCartItem(cartItem);
         Toast.makeText(this, "Added to cart! Go to cart to checkout.", Toast.LENGTH_SHORT).show();
         finish();
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2

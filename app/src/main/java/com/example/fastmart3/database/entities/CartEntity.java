@@ -15,14 +15,22 @@ public class CartEntity {
     public int quantity;
     public String sellerName;
     public String sellerId;
+<<<<<<< HEAD
     public String imageBase64;
+=======
+    public String imageUrl;
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
     public long addedTime;
     
     public CartEntity() {}
     
     @Ignore
     public CartEntity(String productId, String productName, String productType, 
+<<<<<<< HEAD
                      double productPrice, int quantity, String sellerName, String sellerId, String imageBase64) {
+=======
+                     double productPrice, int quantity, String sellerName, String sellerId) {
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         this.productId = productId;
         this.productName = productName;
         this.productType = productType;
@@ -30,7 +38,10 @@ public class CartEntity {
         this.quantity = quantity;
         this.sellerName = sellerName;
         this.sellerId = sellerId;
+<<<<<<< HEAD
         this.imageBase64 = imageBase64;
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         this.addedTime = System.currentTimeMillis();
     }
     

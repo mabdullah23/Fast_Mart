@@ -1,5 +1,6 @@
 package com.example.fastmart3.models;
 
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,3 +52,21 @@ public class OrderItem {
         return map;
     }
 }
+=======
+public class OrderItem {
+    private String productName, productType;
+    private int quantity;
+    private double unitPrice, itemTotal;
+
+    public OrderItem() {}
+    public OrderItem(String productName, String productType, int quantity, double unitPrice) {
+        this.productName = productName; this.productType = productType;
+        this.quantity = quantity; this.unitPrice = unitPrice; this.itemTotal = unitPrice * quantity;
+    }
+    public String getProductName() { return productName; }
+    public String getProductType() { return productType; }
+    public int getQuantity() { return quantity; }
+    public double getUnitPrice() { return unitPrice; }
+    public double getItemTotal() { return itemTotal; }
+}
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2

@@ -5,6 +5,10 @@
     android:orientation="vertical"
     android:background="@color/bg_white">
 
+<<<<<<< HEAD
+=======
+    <!-- Search Bar -->
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,9 +25,13 @@
             android:padding="12dp"
             android:background="@drawable/bg_search"
             android:imeOptions="actionSearch"
+<<<<<<< HEAD
             android:inputType="text"
             android:textColor="@color/text_primary"
             android:textColorHint="@color/text_hint" />
+=======
+            android:inputType="text" />
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
 
         <ImageView
             android:id="@+id/iv_search"
@@ -43,6 +51,10 @@
 
     </LinearLayout>
 
+<<<<<<< HEAD
+=======
+    <!-- No Results -->
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
     <TextView
         android:id="@+id/tv_no_results"
         android:layout_width="wrap_content"
@@ -54,6 +66,10 @@
         android:layout_marginTop="32dp"
         android:visibility="gone" />
 
+<<<<<<< HEAD
+=======
+    <!-- Results List -->
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_search_results"
         android:layout_width="match_parent"

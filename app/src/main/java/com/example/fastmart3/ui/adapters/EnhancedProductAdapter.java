@@ -69,7 +69,11 @@ public class EnhancedProductAdapter extends RecyclerView.Adapter<EnhancedProduct
             boolean newFavState = !isFavorite(product.getProductId());
             if (newFavState) {
                 FavoritesEntity fav = new FavoritesEntity(product.getProductId(), product.getName(),
+<<<<<<< HEAD
                         product.getType(), product.getPrice(), product.getSellerName(), "");
+=======
+                        product.getType(), product.getPrice(), product.getSellerName());
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                 db.favoritesDao().insert(fav);
             } else {
                 db.favoritesDao().deleteByProductId(product.getProductId());
@@ -85,7 +89,11 @@ public class EnhancedProductAdapter extends RecyclerView.Adapter<EnhancedProduct
                 db.cartDao().update(existing);
             } else {
                 CartEntity cartItem = new CartEntity(product.getProductId(), product.getName(),
+<<<<<<< HEAD
                         product.getType(), product.getPrice(), 1, product.getSellerName(), product.getSellerId(), "");
+=======
+                        product.getType(), product.getPrice(), 1, product.getSellerName(), product.getSellerId());
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
                 db.cartDao().insert(cartItem);
             }
             if (listener != null) listener.onCartClick(product);

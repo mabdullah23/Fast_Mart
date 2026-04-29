@@ -1,5 +1,6 @@
 package com.example.fastmart3.ui.activities;
 
+<<<<<<< HEAD
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -31,6 +32,26 @@ public class ProductAddActivity extends AppCompatActivity {
     private Bitmap selectedBitmap;
     private String imageBase64;
     
+=======
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.widget.*;
+import androidx.appcompat.app.AppCompatActivity;
+import com.example.fastmart3.R;
+import com.example.fastmart3.models.Product;
+import com.example.fastmart3.repositories.ProductRepository;
+import com.example.fastmart3.utils.SharedPrefManager;
+import com.example.fastmart3.utils.Constants;
+
+public class ProductAddActivity extends AppCompatActivity {
+    
+    private EditText etName, etPrice, etDescription, etType;
+    private Button btnSubmit;
+    private ProgressBar progressBar;
+    private ProductRepository productRepository;
+    private SharedPrefManager sharedPrefManager;
+
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,13 +62,17 @@ public class ProductAddActivity extends AppCompatActivity {
         etDescription = findViewById(R.id.et_product_description);
         etType = findViewById(R.id.et_product_type);
         btnSubmit = findViewById(R.id.btn_submit_product);
+<<<<<<< HEAD
         btnSelectImage = findViewById(R.id.btn_select_image);
         ivProductImage = findViewById(R.id.iv_product_image);
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         progressBar = findViewById(R.id.progress_bar);
         
         productRepository = new ProductRepository();
         sharedPrefManager = new SharedPrefManager(this);
         
+<<<<<<< HEAD
         btnSelectImage.setOnClickListener(v -> openFileChooser());
         btnSubmit.setOnClickListener(v -> addProduct());
     }
@@ -76,6 +101,11 @@ public class ProductAddActivity extends AppCompatActivity {
         }
     }
     
+=======
+        btnSubmit.setOnClickListener(v -> addProduct());
+    }
+    
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
     private void addProduct() {
         String name = etName.getText().toString().trim();
         String priceStr = etPrice.getText().toString().trim();
@@ -90,10 +120,13 @@ public class ProductAddActivity extends AppCompatActivity {
             etPrice.setError("Price required");
             return;
         }
+<<<<<<< HEAD
         if (imageBase64 == null) {
             Toast.makeText(this, "Please select an image", Toast.LENGTH_SHORT).show();
             return;
         }
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         
         double price = Double.parseDouble(priceStr);
         String sellerId = sharedPrefManager.getUserId();
@@ -102,7 +135,10 @@ public class ProductAddActivity extends AppCompatActivity {
         showLoading(true);
         
         Product product = new Product(name, type, price, description, sellerId, sellerName);
+<<<<<<< HEAD
         product.setImageBase64(imageBase64);
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         
         productRepository.addProduct(sellerId, product, new ProductRepository.AddProductCallback() {
             @Override
@@ -120,9 +156,14 @@ public class ProductAddActivity extends AppCompatActivity {
     }
     
     private void showLoading(boolean isLoading) {
+<<<<<<< HEAD
         progressBar.setVisibility(isLoading ? View.VISIBLE : View.GONE);
         btnSubmit.setEnabled(!isLoading);
         btnSelectImage.setEnabled(!isLoading);
+=======
+        progressBar.setVisibility(isLoading ? android.view.View.VISIBLE : android.view.View.GONE);
+        btnSubmit.setEnabled(!isLoading);
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         btnSubmit.setText(isLoading ? "" : "Add Product");
     }
 }

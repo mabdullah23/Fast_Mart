@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
@@ -27,3 +28,14 @@
         android:icon="@drawable/ic_logout"
         android:title="Logout" />
 </menu>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home" android:icon="@drawable/ic_home" android:title="Home" />
+        <item android:id="@+id/nav_orders" android:icon="@drawable/ic_orders" android:title="Order History" />
+        <item android:id="@+id/nav_account" android:icon="@drawable/ic_account" android:title="Account" />
+    </group>
+    <item android:id="@+id/nav_logout" android:icon="@drawable/ic_logout" android:title="Logout" />
+</menu>
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2

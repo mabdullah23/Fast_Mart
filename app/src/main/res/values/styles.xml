@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base application theme -->
@@ -9,12 +10,29 @@
         <item name="android:textColorPrimary">@color/text_primary</item>
         <item name="android:statusBarColor">@color/primary_dark</item>
         <item name="android:windowBackground">@color/bg_white</item>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.FastMart3" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryVariant">#1976D2</item>
+        <item name="colorSecondary">#FF4081</item>
+        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:statusBarColor">#1976D2</item>
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
     </style>
 
     <!-- Splash Screen Theme -->
     <style name="Theme.Splash" parent="Theme.MaterialComponents.Light.NoActionBar">
+<<<<<<< HEAD
         <item name="android:windowBackground">@color/primary</item>
         <item name="android:statusBarColor">@color/primary_dark</item>
+=======
+        <item name="android:windowBackground">#2196F3</item>
+        <item name="android:statusBarColor">#1976D2</item>
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
@@ -22,7 +40,11 @@
     <!-- Text Styles -->
     <style name="TextViewTitle">
         <item name="android:textSize">24sp</item>
+<<<<<<< HEAD
         <item name="android:textColor">@color/text_primary</item>
+=======
+        <item name="android:textColor">#212121</item>
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -31,7 +53,12 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56dp</item>
         <item name="android:textSize">16sp</item>
+<<<<<<< HEAD
         <item name="android:textColor">@color/text_white</item>
         <item name="android:background">@color/primary</item>
+=======
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">#2196F3</item>
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
     </style>
 </resources>
