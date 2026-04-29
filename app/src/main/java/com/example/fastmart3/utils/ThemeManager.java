@@ -10,12 +10,23 @@ public class ThemeManager {
     
     public static final int THEME_LIGHT = 0;
     public static final int THEME_DARK = 1;
+<<<<<<< HEAD
     public static final int THEME_SYSTEM = 2;
+=======
+<<<<<<< HEAD
+    public static final int THEME_SYSTEM = 2;
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
     
     public static void applyTheme(Context context) {
         SharedPreferences prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         int themeMode = prefs.getInt(KEY_THEME, THEME_LIGHT);
         
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         switch (themeMode) {
             case THEME_DARK:
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
@@ -26,6 +37,15 @@ public class ThemeManager {
             default:
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                 break;
+<<<<<<< HEAD
+=======
+=======
+        if (themeMode == THEME_DARK) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         }
     }
     
@@ -39,6 +59,10 @@ public class ThemeManager {
         SharedPreferences prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         return prefs.getInt(KEY_THEME, THEME_LIGHT);
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
     
     public static String getThemeName(Context context) {
         int mode = getThemeMode(context);
@@ -48,4 +72,9 @@ public class ThemeManager {
             default: return "Light";
         }
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 }

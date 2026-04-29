@@ -1,5 +1,9 @@
 package com.example.fastmart3.ui.fragments.seller;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,6 +13,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+<<<<<<< HEAD
+=======
+=======
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -19,18 +33,39 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.example.fastmart3.R;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 import com.example.fastmart3.models.Order;
 import com.example.fastmart3.models.OrderItem;
 import com.example.fastmart3.utils.ImageUtility;
 import com.example.fastmart3.utils.SharedPrefManager;
 import java.util.ArrayList;
 import java.util.List;
+<<<<<<< HEAD
+=======
+=======
+import com.example.fastmart3.utils.SharedPrefManager;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 
 public class SellerOrderHistoryFragment extends Fragment {
     
     private RecyclerView recyclerView;
     private OrdersAdapter adapter;
+<<<<<<< HEAD
     private List<Order> orderList;
+=======
+<<<<<<< HEAD
+    private List<Order> orderList;
+=======
+    private List<OrderItem> orderList;
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
     private SharedPrefManager sharedPrefManager;
     private TextView tvEmpty;
 
@@ -63,7 +98,15 @@ public class SellerOrderHistoryFragment extends Fragment {
                 orderList.clear();
                 for (DataSnapshot buyerSnap : snapshot.getChildren()) {
                     for (DataSnapshot orderSnap : buyerSnap.getChildren()) {
+<<<<<<< HEAD
                         Order order = orderSnap.getValue(Order.class);
+=======
+<<<<<<< HEAD
+                        Order order = orderSnap.getValue(Order.class);
+=======
+                        OrderItem order = orderSnap.getValue(OrderItem.class);
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
                         if (order != null) {
                             orderList.add(order);
                         }
@@ -76,15 +119,51 @@ public class SellerOrderHistoryFragment extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 tvEmpty.setVisibility(View.VISIBLE);
+<<<<<<< HEAD
                 Toast.makeText(getContext(), "Failed to load orders", Toast.LENGTH_SHORT).show();
+=======
+<<<<<<< HEAD
+                Toast.makeText(getContext(), "Failed to load orders", Toast.LENGTH_SHORT).show();
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
             }
         });
     }
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
     static class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder> {
         private List<Order> orders;
         
         OrdersAdapter(List<Order> orders) {
+<<<<<<< HEAD
+=======
+=======
+    static class OrderItem {
+        public String orderId, buyerId, buyerName, buyerPhone, buyerAddress;
+        public double totalAmount;
+        public long timestamp;
+        public List<ProductItem> items;
+        
+        OrderItem() {}
+    }
+    
+    static class ProductItem {
+        public String productName;
+        public int quantity;
+        public double unitPrice;
+        public double itemTotal;
+    }
+    
+    static class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder> {
+        private List<OrderItem> orders;
+        
+        OrdersAdapter(List<OrderItem> orders) {
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
             this.orders = orders;
         }
         
@@ -97,6 +176,10 @@ public class SellerOrderHistoryFragment extends Fragment {
         
         @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
             Order order = orders.get(position);
             holder.tvBuyerName.setText("Buyer: " + order.getBuyerName());
             holder.tvTotal.setText(String.format("Total: Rs. %.2f", order.getTotalAmount()));
@@ -127,12 +210,25 @@ public class SellerOrderHistoryFragment extends Fragment {
                 holder.ivProductImage.setImageResource(R.drawable.ic_product_default);
                 holder.tvProductName.setText("No items");
             }
+<<<<<<< HEAD
+=======
+=======
+            OrderItem order = orders.get(position);
+            holder.tvBuyerName.setText("Buyer: " + order.buyerName);
+            holder.tvTotal.setText(String.format("Total: Rs. %.2f", order.totalAmount));
+            holder.tvItems.setText("Items: " + (order.items != null ? order.items.size() : 0));
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         }
         
         @Override
         public int getItemCount() { return orders.size(); }
         
         static class ViewHolder extends RecyclerView.ViewHolder {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
             ImageView ivProductImage;
             TextView tvBuyerName, tvProductName, tvTotal, tvItems, tvStatus;
             ViewHolder(@NonNull View itemView) {
@@ -143,6 +239,17 @@ public class SellerOrderHistoryFragment extends Fragment {
                 tvTotal = itemView.findViewById(R.id.tv_total);
                 tvItems = itemView.findViewById(R.id.tv_items);
                 tvStatus = itemView.findViewById(R.id.tv_status);
+<<<<<<< HEAD
+=======
+=======
+            TextView tvBuyerName, tvTotal, tvItems;
+            ViewHolder(@NonNull View itemView) {
+                super(itemView);
+                tvBuyerName = itemView.findViewById(R.id.tv_buyer_name);
+                tvTotal = itemView.findViewById(R.id.tv_total);
+                tvItems = itemView.findViewById(R.id.tv_items);
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
             }
         }
     }

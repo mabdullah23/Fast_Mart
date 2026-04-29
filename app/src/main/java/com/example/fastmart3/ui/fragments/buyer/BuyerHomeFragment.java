@@ -9,17 +9,35 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+<<<<<<< HEAD
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+=======
+<<<<<<< HEAD
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 import com.example.fastmart3.R;
 import com.example.fastmart3.database.DatabaseHelper;
 import com.example.fastmart3.database.entities.CartEntity;
 import com.example.fastmart3.database.entities.FavoritesEntity;
 import com.example.fastmart3.models.Product;
 import com.example.fastmart3.repositories.ProductRepository;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 import com.example.fastmart3.ui.activities.ChatActivity;
 import com.example.fastmart3.ui.activities.ProductDescriptionActivity;
 import com.example.fastmart3.ui.adapters.BuyerProductAdapter;
 import com.example.fastmart3.ui.dialogs.SellerListDialog;
+<<<<<<< HEAD
+=======
+=======
+import com.example.fastmart3.ui.activities.ProductDescriptionActivity;
+import com.example.fastmart3.ui.adapters.BuyerProductAdapter;
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 import com.example.fastmart3.utils.SharedPrefManager;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,15 +50,30 @@ public class BuyerHomeFragment extends Fragment implements BuyerProductAdapter.O
     private DatabaseHelper dbHelper;
     private SharedPrefManager sharedPrefManager;
     private List<Product> allProducts = new ArrayList<>();
+<<<<<<< HEAD
     private FloatingActionButton fabChat;
+=======
+<<<<<<< HEAD
+    private FloatingActionButton fabChat;
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_buyer_home_simple, container, false);
         
         recyclerView = view.findViewById(R.id.recycler_products);
+<<<<<<< HEAD
         fabChat = view.findViewById(R.id.fab_chat);
         
+=======
+<<<<<<< HEAD
+        fabChat = view.findViewById(R.id.fab_chat);
+        
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         
         adapter = new BuyerProductAdapter();
@@ -53,6 +86,10 @@ public class BuyerHomeFragment extends Fragment implements BuyerProductAdapter.O
         
         loadProducts();
         
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         fabChat.setOnClickListener(v -> openChatWithSeller());
         
         return view;
@@ -90,11 +127,26 @@ public class BuyerHomeFragment extends Fragment implements BuyerProductAdapter.O
         dialog.show(getChildFragmentManager(), "SellerListDialog");
     }
     
+<<<<<<< HEAD
+=======
+=======
+        return view;
+    }
+    
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
     private void loadProducts() {
         productRepository.getAllProducts(new ProductRepository.ProductsCallback() {
             @Override
             public void onSuccess(List<Product> products) {
                 allProducts = products;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                // Filter out seller's own products
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
                 String currentUserId = sharedPrefManager.getUserId();
                 List<Product> filteredProducts = new ArrayList<>();
                 for (Product p : products) {
@@ -121,7 +173,14 @@ public class BuyerHomeFragment extends Fragment implements BuyerProductAdapter.O
         intent.putExtra("product_seller", product.getSellerName());
         intent.putExtra("product_seller_id", product.getSellerId());
         intent.putExtra("product_type", product.getType());
+<<<<<<< HEAD
         intent.putExtra("product_image_base64", product.getImageBase64());
+=======
+<<<<<<< HEAD
+        intent.putExtra("product_image_base64", product.getImageBase64());
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         startActivity(intent);
     }
     
@@ -135,7 +194,15 @@ public class BuyerHomeFragment extends Fragment implements BuyerProductAdapter.O
                     Toast.makeText(getContext(), "Removed from favorites", Toast.LENGTH_SHORT).show();
                 } else {
                     FavoritesEntity fav = new FavoritesEntity(product.getProductId(), product.getName(),
+<<<<<<< HEAD
                             product.getType(), product.getPrice(), product.getSellerName(), product.getImageBase64());
+=======
+<<<<<<< HEAD
+                            product.getType(), product.getPrice(), product.getSellerName(), product.getImageBase64());
+=======
+                            product.getType(), product.getPrice(), product.getSellerName());
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
                     dbHelper.insertFavorite(fav);
                     Toast.makeText(getContext(), "Added to favorites", Toast.LENGTH_SHORT).show();
                 }
@@ -147,8 +214,17 @@ public class BuyerHomeFragment extends Fragment implements BuyerProductAdapter.O
     @Override
     public void onCartClick(Product product) {
         CartEntity cartItem = new CartEntity(product.getProductId(), product.getName(),
+<<<<<<< HEAD
                 product.getType(), product.getPrice(), 1, product.getSellerName(), 
                 product.getSellerId(), product.getImageBase64());
+=======
+<<<<<<< HEAD
+                product.getType(), product.getPrice(), 1, product.getSellerName(), 
+                product.getSellerId(), product.getImageBase64());
+=======
+                product.getType(), product.getPrice(), 1, product.getSellerName(), product.getSellerId());
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         dbHelper.insertCartItem(cartItem);
         Toast.makeText(getContext(), product.getName() + " added to cart", Toast.LENGTH_SHORT).show();
     }

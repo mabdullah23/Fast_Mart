@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -66,4 +70,21 @@
 
     </LinearLayout>
 
+<<<<<<< HEAD
 </LinearLayout>
+=======
+</LinearLayout>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Placeholder"
+        android:textSize="20sp"
+        android:layout_gravity="center" />
+</FrameLayout>
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec

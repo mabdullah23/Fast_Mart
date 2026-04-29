@@ -5,7 +5,15 @@
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center"
+<<<<<<< HEAD
     android:background="#FFFFFF">
+=======
+<<<<<<< HEAD
+    android:background="@color/bg_white">
+=======
+    android:background="#FFFFFF">
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,7 +21,15 @@
         android:text="FASTMART"
         android:textSize="32sp"
         android:textStyle="bold"
+<<<<<<< HEAD
         android:textColor="#2196F3"
+=======
+<<<<<<< HEAD
+        android:textColor="@color/primary"
+=======
+        android:textColor="#2196F3"
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         android:layout_marginBottom="32dp" />
 
     <EditText
@@ -24,7 +40,17 @@
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:layout_marginBottom="16dp"
+<<<<<<< HEAD
         android:background="@android:drawable/edit_text" />
+=======
+<<<<<<< HEAD
+        android:background="@drawable/bg_edittext"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint" />
+=======
+        android:background="@android:drawable/edit_text" />
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 
     <EditText
         android:id="@+id/et_login_password"
@@ -34,7 +60,17 @@
         android:inputType="textPassword"
         android:padding="12dp"
         android:layout_marginBottom="24dp"
+<<<<<<< HEAD
         android:background="@android:drawable/edit_text" />
+=======
+<<<<<<< HEAD
+        android:background="@drawable/bg_edittext"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint" />
+=======
+        android:background="@android:drawable/edit_text" />
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 
     <Button
         android:id="@+id/btn_login"
@@ -42,8 +78,18 @@
         android:layout_height="56dp"
         android:text="Login"
         android:textSize="16sp"
+<<<<<<< HEAD
         android:background="#2196F3"
         android:textColor="#FFFFFF" />
+=======
+<<<<<<< HEAD
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/text_white" />
+=======
+        android:background="#2196F3"
+        android:textColor="#FFFFFF" />
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 
     <ProgressBar
         android:id="@+id/progress_bar"
@@ -57,7 +103,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don't have an account? Sign Up"
+<<<<<<< HEAD
         android:textColor="#2196F3"
+=======
+<<<<<<< HEAD
+        android:textColor="@color/primary"
+=======
+        android:textColor="#2196F3"
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         android:layout_marginTop="24dp"
         android:clickable="true"
         android:focusable="true" />

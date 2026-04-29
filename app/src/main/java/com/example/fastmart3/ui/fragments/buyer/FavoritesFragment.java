@@ -1,6 +1,10 @@
 package com.example.fastmart3.ui.fragments.buyer;
 
 import android.app.AlertDialog;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -8,6 +12,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+<<<<<<< HEAD
+=======
+=======
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,7 +30,14 @@ import com.example.fastmart3.R;
 import com.example.fastmart3.database.DatabaseHelper;
 import com.example.fastmart3.database.entities.FavoritesEntity;
 import com.example.fastmart3.database.entities.CartEntity;
+<<<<<<< HEAD
 import com.example.fastmart3.utils.ImageUtility;
+=======
+<<<<<<< HEAD
+import com.example.fastmart3.utils.ImageUtility;
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 import java.util.List;
 
 public class FavoritesFragment extends Fragment {
@@ -79,6 +99,10 @@ public class FavoritesFragment extends Fragment {
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
             FavoritesEntity item = favorites.get(position);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
             
             // Load image from Base64
             if (item.imageBase64 != null && !TextUtils.isEmpty(item.imageBase64)) {
@@ -92,6 +116,11 @@ public class FavoritesFragment extends Fragment {
                 holder.ivProductImage.setImageResource(R.drawable.ic_product_default);
             }
             
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
             holder.tvName.setText(item.productName);
             holder.tvPrice.setText(String.format("Rs. %.2f", item.productPrice));
             holder.tvType.setText(item.productType);
@@ -111,11 +140,37 @@ public class FavoritesFragment extends Fragment {
                     .show();
             });
             
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
             holder.ivCart.setOnClickListener(v -> {
                 CartEntity cartItem = new CartEntity(item.productId, item.productName,
                         item.productType, item.productPrice, 1, item.sellerName, "", item.imageBase64);
                 dbHelper.insertCartItem(cartItem);
                 Toast.makeText(getContext(), item.productName + " added to cart", Toast.LENGTH_SHORT).show();
+<<<<<<< HEAD
+=======
+=======
+            // Add to Cart from Favorites
+            holder.ivCart.setOnClickListener(v -> {
+                // Check if already in cart
+                dbHelper.getCartItem(item.productId, cartItem -> {
+                    if (cartItem != null) {
+                        // Update quantity
+                        cartItem.quantity++;
+                        dbHelper.updateCartItem(cartItem);
+                        Toast.makeText(getContext(), "Product already in cart! Quantity increased.", Toast.LENGTH_SHORT).show();
+                    } else {
+                        // Add new item to cart
+                        CartEntity newCartItem = new CartEntity(item.productId, item.productName,
+                                item.productType, item.productPrice, 1, item.sellerName, "");
+                        dbHelper.insertCartItem(newCartItem);
+                        Toast.makeText(getContext(), item.productName + " added to cart", Toast.LENGTH_SHORT).show();
+                    }
+                });
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
             });
         }
         
@@ -123,11 +178,24 @@ public class FavoritesFragment extends Fragment {
         public int getItemCount() { return favorites.size(); }
         
         class ViewHolder extends RecyclerView.ViewHolder {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
             ImageView ivProductImage, ivDelete, ivCart;
             TextView tvName, tvPrice, tvType;
             ViewHolder(View itemView) {
                 super(itemView);
                 ivProductImage = itemView.findViewById(R.id.iv_product_image);
+<<<<<<< HEAD
+=======
+=======
+            TextView tvName, tvPrice, tvType;
+            android.widget.ImageView ivDelete, ivCart;
+            ViewHolder(View itemView) {
+                super(itemView);
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
                 tvName = itemView.findViewById(R.id.tv_product_name);
                 tvPrice = itemView.findViewById(R.id.tv_product_price);
                 tvType = itemView.findViewById(R.id.tv_product_type);

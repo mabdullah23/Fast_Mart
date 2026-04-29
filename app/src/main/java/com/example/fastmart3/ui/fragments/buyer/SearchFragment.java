@@ -146,7 +146,15 @@ public class SearchFragment extends Fragment implements BuyerProductAdapter.OnPr
                     Toast.makeText(getContext(), "Removed from favorites", Toast.LENGTH_SHORT).show();
                 } else {
                     FavoritesEntity fav = new FavoritesEntity(product.getProductId(), product.getName(),
+<<<<<<< HEAD
                             product.getType(), product.getPrice(), product.getSellerName(), "");
+=======
+<<<<<<< HEAD
+                            product.getType(), product.getPrice(), product.getSellerName(), "");
+=======
+                            product.getType(), product.getPrice(), product.getSellerName());
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
                     dbHelper.insertFavorite(fav);
                     Toast.makeText(getContext(), "Added to favorites", Toast.LENGTH_SHORT).show();
                 }
@@ -158,7 +166,15 @@ public class SearchFragment extends Fragment implements BuyerProductAdapter.OnPr
     @Override
     public void onCartClick(Product product) {
         CartEntity cartItem = new CartEntity(product.getProductId(), product.getName(),
+<<<<<<< HEAD
                 product.getType(), product.getPrice(), 1, product.getSellerName(), product.getSellerId(), "");
+=======
+<<<<<<< HEAD
+                product.getType(), product.getPrice(), 1, product.getSellerName(), product.getSellerId(), "");
+=======
+                product.getType(), product.getPrice(), 1, product.getSellerName(), product.getSellerId());
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         dbHelper.insertCartItem(cartItem);
         Toast.makeText(getContext(), product.getName() + " added to cart", Toast.LENGTH_SHORT).show();
     }

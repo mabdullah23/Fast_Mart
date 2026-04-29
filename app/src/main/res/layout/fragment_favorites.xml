@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+<<<<<<< HEAD
     android:layout_height="match_parent"
     android:background="@color/bg_white">
+=======
+<<<<<<< HEAD
+    android:layout_height="match_parent"
+    android:background="@color/bg_white">
+=======
+    android:layout_height="match_parent">
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_favorites"

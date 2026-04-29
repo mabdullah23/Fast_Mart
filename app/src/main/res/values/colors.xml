@@ -9,6 +9,10 @@
     <color name="accent">#FF4081</color>
     <color name="accent_dark">#F50057</color>
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
     <!-- Background Colors - LIGHT MODE -->
     <color name="bg_white">#FFFFFF</color>
     <color name="bg_light">#F5F5F5</color>
@@ -16,6 +20,17 @@
     <color name="bg_card">#FFFFFF</color>
     
     <!-- Text Colors - LIGHT MODE -->
+<<<<<<< HEAD
+=======
+=======
+    <!-- Background Colors -->
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bg_light">#F5F5F5</color>
+    <color name="bg_gray">#EEEEEE</color>
+    
+    <!-- Text Colors -->
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
     <color name="text_hint">#BDBDBD</color>

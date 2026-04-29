@@ -20,7 +20,14 @@
         android:layout_height="wrap_content"
         android:text="Your cart is empty"
         android:textSize="16sp"
+<<<<<<< HEAD
         android:textColor="@color/text_secondary"
+=======
+<<<<<<< HEAD
+        android:textColor="@color/text_secondary"
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         android:textAlignment="center"
         android:padding="24dp"
         android:visibility="gone" />
@@ -31,12 +38,28 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <!-- Bottom Checkout Container -->
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
+<<<<<<< HEAD
         android:background="@color/bg_light">
+=======
+<<<<<<< HEAD
+        android:background="@color/bg_card"
+        android:elevation="8dp">
+=======
+        android:background="@color/bg_light">
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 
         <TextView
             android:id="@+id/tv_total_price"
@@ -55,7 +78,15 @@
             android:layout_height="56dp"
             android:text="Checkout"
             android:textSize="16sp"
+<<<<<<< HEAD
             android:background="@color/primary"
+=======
+<<<<<<< HEAD
+            android:backgroundTint="@color/primary"
+=======
+            android:background="@color/primary"
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
             android:textColor="@color/text_white" />
 
     </LinearLayout>

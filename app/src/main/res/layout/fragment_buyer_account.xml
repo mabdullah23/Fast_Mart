@@ -11,6 +11,13 @@
         android:orientation="vertical"
         android:padding="24dp">
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        <!-- Profile Header -->
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,6 +41,10 @@
                 android:textColor="@color/primary" />
         </LinearLayout>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,6 +52,18 @@
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp"
             app:cardBackgroundColor="@color/bg_card">
+<<<<<<< HEAD
+=======
+=======
+        <!-- Card with User Info -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -55,7 +78,14 @@
                     android:text="Name: "
                     android:textSize="16sp"
                     android:textStyle="bold"
+<<<<<<< HEAD
                     android:textColor="@color/text_primary"
+=======
+<<<<<<< HEAD
+                    android:textColor="@color/text_primary"
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
                     android:layout_marginBottom="12dp" />
 
                 <View
@@ -70,7 +100,14 @@
                     android:layout_height="wrap_content"
                     android:text="Email: "
                     android:textSize="16sp"
+<<<<<<< HEAD
                     android:textColor="@color/text_primary"
+=======
+<<<<<<< HEAD
+                    android:textColor="@color/text_primary"
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
                     android:layout_marginBottom="12dp" />
 
                 <View
@@ -85,7 +122,14 @@
                     android:layout_height="wrap_content"
                     android:text="Phone: "
                     android:textSize="16sp"
+<<<<<<< HEAD
                     android:textColor="@color/text_primary"
+=======
+<<<<<<< HEAD
+                    android:textColor="@color/text_primary"
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
                     android:layout_marginBottom="12dp" />
 
                 <View
@@ -100,7 +144,14 @@
                     android:layout_height="wrap_content"
                     android:text="Address: "
                     android:textSize="16sp"
+<<<<<<< HEAD
                     android:textColor="@color/text_primary"
+=======
+<<<<<<< HEAD
+                    android:textColor="@color/text_primary"
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
                     android:layout_marginBottom="12dp" />
 
                 <View
@@ -115,7 +166,14 @@
                     android:layout_height="wrap_content"
                     android:text="Country: "
                     android:textSize="16sp"
+<<<<<<< HEAD
                     android:textColor="@color/text_primary"
+=======
+<<<<<<< HEAD
+                    android:textColor="@color/text_primary"
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
                     android:layout_marginBottom="12dp" />
 
                 <View
@@ -130,7 +188,14 @@
                     android:layout_height="wrap_content"
                     android:text="Gender: "
                     android:textSize="16sp"
+<<<<<<< HEAD
                     android:textColor="@color/text_primary"
+=======
+<<<<<<< HEAD
+                    android:textColor="@color/text_primary"
+=======
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
                     android:layout_marginBottom="12dp" />
 
                 <View
@@ -144,12 +209,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="DOB: "
+<<<<<<< HEAD
                     android:textSize="16sp"
                     android:textColor="@color/text_primary" />
+=======
+<<<<<<< HEAD
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary" />
+=======
+                    android:textSize="16sp" />
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         <Button
             android:id="@+id/btn_theme"
             android:layout_width="match_parent"
@@ -160,15 +238,34 @@
             android:textColor="@color/text_white"
             android:layout_marginBottom="12dp" />
 
+<<<<<<< HEAD
+=======
+=======
+        <!-- Logout Button -->
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         <Button
             android:id="@+id/btn_logout"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:text="Logout"
             android:textSize="16sp"
+<<<<<<< HEAD
             android:background="@color/error"
             android:textColor="@color/text_white" />
 
+=======
+<<<<<<< HEAD
+            android:background="@color/error"
+            android:textColor="@color/text_white" />
+
+=======
+            android:textColor="@color/text_white"
+            android:background="@drawable/bg_logout_button" />
+
+        <!-- Version Text -->
+>>>>>>> 560c833ca4b36c9c927e21a5fcd8960f89d7c3b2
+>>>>>>> db181f6f4caed1408fd3e8c62f6c4739051084ec
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
